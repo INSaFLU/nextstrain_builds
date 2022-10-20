@@ -8,7 +8,7 @@
       "name": "INSaFLU"
     }
   ],
-  "build_url": "https://github.com/INSaFLU/nextstrain_builds/flu",
+  "build_url": "https://github.com/INSaFLU/nextstrain_builds",
   "colorings": [
     {
       "key": "gt",

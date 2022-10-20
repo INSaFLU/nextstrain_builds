@@ -9,7 +9,7 @@
       "url": "https://insaflu.insa.pt"
     }
   ],
-  "build_url": "https://github.com/INSaFLU/nextstrain_builds/mpx",
+  "build_url": "https://github.com/INSaFLU/nextstrain_builds",
   "colorings": [
     {
       "key": "outbreak",

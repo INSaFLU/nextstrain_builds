@@ -3,7 +3,7 @@
   "maintainers": [
     {"name": "INSA", "url": "https://www.insa.min-saude.pt/"}
   ],
-  "build_url": "https://github.com/INSaFLU/nextstrain_builds/generic",
+  "build_url": "https://github.com/INSaFLU/nextstrain_builds",
   "colorings": [
     {
       "key": "type-subtype",
