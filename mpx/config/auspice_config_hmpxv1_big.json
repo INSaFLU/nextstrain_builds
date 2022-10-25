@@ -32,6 +32,16 @@
       "type": "categorical"
     },
     {
+      "key": "division",
+      "title": "Division",
+      "type": "categorical"
+    },    
+    {
+      "key": "location",
+      "title": "Location",
+      "type": "categorical"
+    },
+    {
       "key": "host",
       "title": "Host",
       "type": "categorical"
@@ -58,7 +68,10 @@
     }
   ],
   "geo_resolutions": [
-    "country"
+    "location"
+    "division",
+    "country",
+    "region"
   ],
   "display_defaults": {
     "color_by": "lineage",
@@ -69,8 +82,10 @@
   "filters": [
     "clade_membership",
     "lineage",
-    "country",
     "region",
+    "country",
+    "division",
+    "location",
     "recency",
     "host"
   ]
