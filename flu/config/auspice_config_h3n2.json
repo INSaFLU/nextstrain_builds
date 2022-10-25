@@ -81,6 +81,11 @@
       "type": "categorical"
     },
     {
+      "key": "location",
+      "title": "Location",
+      "type": "categorical"
+    },    
+    {
       "key": "submitting_lab",
       "title": "Submitting lab",
       "type": "categorical"
@@ -102,6 +107,7 @@
     }
   ],
   "geo_resolutions": [
+    "location",
     "division",
     "country",
     "region"
@@ -115,6 +121,7 @@
     "region",
     "country",
     "division",
+    "location",
     "submitting_lab",
     "recency",
     "epiweek"
