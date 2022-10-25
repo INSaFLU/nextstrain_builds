@@ -68,7 +68,7 @@
     }
   ],
   "geo_resolutions": [
-    "location"
+    "location",
     "division",
     "country",
     "region"
