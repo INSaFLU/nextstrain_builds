@@ -16,6 +16,11 @@
       "type": "categorical"
     },
     {
+     "key": "division",
+      "title": "Division",
+      "type": "categorical"
+    },    
+    {
       "key": "country",
       "title": "Country",
       "type": "categorical"
@@ -28,6 +33,7 @@
   ],
   "geo_resolutions": [
     "location",
+    "division",
     "country",
     "region"
   ],
@@ -41,6 +47,7 @@
   },
   "filters": [
     "location",
+    "division",
     "country",
     "region"
   ]
