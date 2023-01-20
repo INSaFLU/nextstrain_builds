@@ -5,6 +5,8 @@ The original build is available online at [nextstrain.org/flu](https://nextstrai
 
 At the moment, it limits the analysis to the HA segment, and does not perform fitness analysis.
 
+We've changed it to allow more ambiguity and divergence, accepting up to 25 ambiguous positions in the HA protein and a clock_filter_iqd of 12.
+
 The influenza virus output files have the wildcard set
 
 `{lineage}_{segment}_{resolution}`
