@@ -60,7 +60,7 @@ def codon_align(seq, refstr, refAA, cds_start, cds_end):
     seqAA = safe_translate(seqCDS_ungapped)
 
     scoreAA, refalnAA, seqalnAA = align_pairwise(refAA, seqAA)
-    if scoreAA<0 or sum(seqAA.count(x) for x in ['*', 'X'])>5 or refalnAA.count('-')>5:
+    if scoreAA<0 or sum(seqAA.count(x) for x in ['*', 'X'])>25 or refalnAA.count('-')>5:
         print(seq.id, "didn't translate properly", file=sys.stderr)
         return None
 
