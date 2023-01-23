@@ -1,17 +1,15 @@
 {
-  "title": "Genomic epidemiology of RSV",
+  "title": "INSaFLU RSV Nextstrain build",
   "maintainers": [
-    {"name": "Laura Urbanska", "url": "http://nextstrain.org"},
-    {"name": "Richard Neher", "url": "http://nextstrain.org"}
-
+    {"name": "INSA", "url": "https://www.insa.min-saude.pt"}
   ],
   "data_provenance": [
     {
-      "name": "GenBank",
-      "url": "https://www.ncbi.nlm.nih.gov/genbank/"
+      "name": "INSaFLU",
+      "url": "https://insaflu.insa.pt"
     }
   ],
-  "build_url": "https://github.com/nextstrain/rsv",
+  "build_url":  "https://github.com/INSaFLU/nextstrain_builds",
 
   "colorings": [
     {
@@ -45,6 +43,8 @@
       "type": "ordinal"
     }  ],
   "geo_resolutions": [
+    "location",
+    "division",
     "country",
     "region"
   ],
@@ -59,6 +59,8 @@
     "transmission_lines": false
     },
   "filters": [
+    "location",
+    "division",
     "country",
     "region",
     "clade_membership"

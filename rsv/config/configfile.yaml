@@ -9,7 +9,7 @@ exclude: "config/outliers.txt"
 description: "config/description.md"
 
 strain_id_field: "accession"
-display_strain_field: "strain_original"
+display_strain_field: "accession"
 
 subtypes: ['a', 'b']
 
@@ -32,7 +32,7 @@ files:
 refine:
   coalescent: "opt"
   date_inference: "marginal"
-  clock_filter_iqd: 4
+  clock_filter_iqd: 12
 
 ancestral:
   inference: "joint"
