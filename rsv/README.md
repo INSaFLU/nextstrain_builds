@@ -4,6 +4,8 @@
 
 This is a customized Nextstrain build for respiratory syncytial virus (RSV). This is based on the public build, visible at nextstrain.org/rsv.
 
+We've modified it to allow more divergence, increasing clock_filter_iqd to 12.
+
 
 ## Input data
 
