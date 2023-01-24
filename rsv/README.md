@@ -1,15 +1,17 @@
 
 
-# nextstrain.org/rsv
+## nextstrain.org/rsv
 
 This is a customized Nextstrain build for respiratory syncytial virus (RSV). This is based on the public build, visible at nextstrain.org/rsv.
 
 
-Usage
-Input data
+## Usage
+
+# Input data
+
 Input sequences (sequences.fasta) and metadata (metadata.tsv) need to be added to the data/a (RSV-A) or data/b (RSV-B) folder.
 
-Run Analysis Pipeline
+## Run Analysis Pipeline
 
 The workflow produces whole genome trees for RSV-A and RSV-B.
 
