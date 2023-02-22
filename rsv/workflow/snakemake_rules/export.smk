@@ -39,15 +39,12 @@ rule export:
     output:
         auspice_json =  build_dir + "/{a_or_b}/{build_name}/tree.json",
         root_sequence = build_dir + "/{a_or_b}/{build_name}/tree_root-sequence.json"
-    params:
-    	title = lambda w: f"RSV-{w.a_or_b.upper()} phylogeny"
     shell:
         """
         augur export v2 \
             --tree {input.tree} \
             --metadata {input.metadata} \
             --node-data {input.node_data} \
-            --title {params.title:q} \
             --description {input.description} \
             --colors {input.colors} \
             --auspice-config {input.auspice_config} \
