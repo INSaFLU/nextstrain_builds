@@ -51,6 +51,7 @@ def annotate_metadata_file(metadata_infile, metadata_outfile, clade_assignments)
 				new_line = line.strip() + "\th5_label_clade\n"
 			else:
 				strain_name = line.split("\t")[0]
+				strain_name = strain_name.replace('"','')
 				if strain_name in clade_assignments:
 					clade = clade_assignments[strain_name]
 					known += 1
