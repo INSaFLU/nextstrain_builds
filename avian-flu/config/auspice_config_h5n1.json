@@ -72,7 +72,7 @@
     "color_by": "h5_label_clade"
   },
   "filters": [
-    "h5_label_clade"
+    "h5_label_clade",
     "host",
     "location",
     "division",
