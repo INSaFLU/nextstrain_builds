@@ -52,7 +52,8 @@ def separate_new_strains(new_strains_list, input_fasta, output_fasta):
         outfile.write("")
     
     for seq in SeqIO.parse(input_fasta, "fasta"):
-        strain = seq.description.split("|")[0]
+        #strain = seq.description.split("|")[0]
+        strain = seq.description
         full_sequence_header = seq.description
         
         if strain in new_strains_list:             
