@@ -26,7 +26,7 @@ def group_by(w):
     return gb[w.subtype]
 
 def sequences_per_group(w):
-    spg = {'h5nx': '5','h5n1': '10', 'h7n9': '70', 'h9n2': '10'}
+    spg = {'h5nx': '1000','h5n1': '1000', 'h7n9': '1000', 'h9n2': '1000'}
     return spg[w.subtype]
 
 def min_length(w):
@@ -149,7 +149,7 @@ rule refine:
     params:
         coalescent = "const",
         date_inference = "marginal",
-        clock_filter_iqd = 4
+        clock_filter_iqd = 12
     shell:
         """
         augur refine \

@@ -1,9 +1,9 @@
 {
-  "title": "Real-time tracking of influenza A/H5N1 virus evolution",
+  "title": "INSaFLU Influenza A/H5N1 Nextstrain build",
   "maintainers": [
-    {"name": "Louise Moncla", "url": "http://bedford.io/team/louise-moncla/"}
+    {"name": "INSA", "url": "https://www.insa.min-saude.pt/"}
   ],
-  "build_url": "https://github.com/nextstrain/avian-flu",
+  "build_url": "https://github.com/INSaFLU/nextstrain_builds",
   "colorings": [
     {
       "key": "gt",
@@ -18,6 +18,16 @@
     {
       "key": "country",
       "title": "Country",
+      "type": "categorical"
+    },
+    {
+      "key": "division",
+      "title": "Division",
+      "type": "categorical"
+    },
+    {
+      "key": "location",
+      "title": "Location",
       "type": "categorical"
     },
     {
@@ -52,15 +62,20 @@
     }
   ],
   "geo_resolutions": [
+    "location",
+    "division",
     "region",
     "country"
   ],
   "display_defaults": {
     "map_triplicate": true,
-    "color_by": "region"
+    "color_by": "h5_label_clade"
   },
   "filters": [
+    "h5_label_clade"
     "host",
+    "location",
+    "division",
     "region",
     "country",
     "submitting_lab"
