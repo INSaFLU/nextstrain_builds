@@ -17,7 +17,7 @@ that currently use the following values:
 To run this customized build, copy sequences_{lineage}_{segment}.fasta and metadata_{lineage}_{segment}ha.tsv into the data folder and run:
 
 ```
-snakemake  auspice/flu_{lineage}_ha_{resolution}.json --configfile config/configfile.yaml --cores [nbr of threads]
+snakemake  auspice/flu_avian_{lineage}_ha_{resolution}.json --configfile config/configfile.yaml --cores [nbr of threads]
 ```
 
 In order to have clade information available, before running the build, you need to estimate clades (you need to have HA gene sequences):
