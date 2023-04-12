@@ -19,8 +19,12 @@ def download_by(w):
 
 def metadata_by_wildcards(w):
     standard_md = "data/metadata_" + w.subtype + "_" + w.segment + ".tsv"
-    md = {"h5n1": rules.add_h5_clade.output.metadata, "h5nx": rules.add_h5_clade.output.metadata, "h7n9": standard_md, "h9n2": standard_md }
-    return(md[w.subtype])
+    if((w.subtype == 'h5n1') and (w.segment == 'ha')):
+        return(rules.add_h5_clade.output.metadata)
+    else:
+        return(standard_md)
+    #md = {"h5n1": rules.add_h5_clade.output.metadata, "h5nx": rules.add_h5_clade.output.metadata, "h7n9": standard_md, "h9n2": standard_md }
+    #return(md[w.subtype])
 
 def group_by(w):
     gb = {'h5nx': 'subtype country year','h5n1': 'region country year', 'h7n9': 'division year', 'h9n2': 'country year'}
@@ -245,6 +249,37 @@ rule export:
         traits = rules.traits.output.node_data,
         nt_muts = rules.ancestral.output.node_data,
         aa_muts = rules.translate.output.node_data,
+        colors = files.colors,
+        lat_longs = files.lat_longs,
+        auspice_config = files.auspice_config,
+        footer_description = files.footer_description
+    output:
+        auspice_json = "auspice/flu_avian_{subtype}_{segment}.json"
+    wildcard_constraints:
+        segment="pb2|pb1|pa|np|na|mp|ns"
+    shell:
+        """
+        augur export v2 \
+            --tree {input.tree} \
+            --metadata {input.metadata} \
+            --node-data {input.branch_lengths} {input.traits} {input.nt_muts} {input.aa_muts}\
+            --colors {input.colors} \
+           --lat-longs {input.lat_longs} \
+            --auspice-config {input.auspice_config} \
+            --include-root-sequence \
+            --description {input.footer_description} \
+            --output {output.auspice_json}
+        """
+
+rule export_ha:
+    message: "Exporting data files for for auspice"
+    input:
+        tree = rules.refine.output.tree,
+        metadata = metadata_by_wildcards,
+        branch_lengths = rules.refine.output.node_data,
+        traits = rules.traits.output.node_data,
+        nt_muts = rules.ancestral.output.node_data,
+        aa_muts = rules.translate.output.node_data,
         fcs = rules.cleavage_site.output.cleavage_site_annotations,
         cleavage_site_sequences = rules.cleavage_site.output.cleavage_site_sequences,
         colors = files.colors,
@@ -253,6 +288,8 @@ rule export:
         footer_description = files.footer_description
     output:
         auspice_json = "auspice/flu_avian_{subtype}_{segment}.json"
+    wildcard_constraints:
+        segment='ha'
     shell:
         """
         augur export v2 \
