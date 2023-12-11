@@ -16,8 +16,6 @@ Our bioinformatic processing workflow can be found at [github.com/nextstrain/rsv
 <p>We increased clock_filter_iqd to 12.</p>
 
 <p>References used: </p>
-<p>RSV A: <a href="https://www.ncbi.nlm.nih.gov/nuccore/KJ627695.1/" target="_blank">RSV-A/US/BID-V8469/2001</a></p>
-<p>RSV B: <a href="https://www.ncbi.nlm.nih.gov/nuccore/MG642037.1/" target="_blank">RSVB/Homo sapiens/USA/MCRSV_208/1980</a></p>
-
-
+<p>RSV A: GISAID ID EPI_ISL_412866</p>
+<p>RSV B: GISAID ID EPI_ISL_1653999</p>
 
