@@ -33,8 +33,8 @@ fix_tree: true
 ## refine
 timetree: true
 root: "MK783032 MK783030"
-#clock_rate: 5.7e-5
-#clock_std_dev: 2e-5
+clock_rate: 5.7e-5
+clock_std_dev: 2e-5
 #clock_filter_iqd: 12
 
 ## recency
