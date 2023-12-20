@@ -237,7 +237,7 @@ rule refine:
     params:
         coalescent="opt",
         date_inference="marginal",
-        clock_filter_iqd=0,
+        clock_filter_iqd=12,
         root=config["root"],
         clock_rate=lambda w: f"--clock-rate {config['clock_rate']}"
         if "clock_rate" in config
