@@ -38,10 +38,10 @@ FEATURES             Location/Qualifiers
                      /strain="Influenza B virus (B/Singapore/11/1994)"
      gene            12..1766
                      /gene="HA"
-     CDS             12..57
+     CDS             12..56
                      /product="Signal peptide"
                      /gene="SigPep"
-     CDS             57..1095
+     CDS             57..1094
                      /product="HA1 protein"
                      /gene="HA1"
      CDS             1095..1766
