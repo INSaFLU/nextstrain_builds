@@ -12,15 +12,15 @@ The influenza virus output files have the wildcard set
 that currently use the following values:
 
 * lineage: [`h5n1`]
-* segment: [`ha`, `na`, `pb2`]
+* segment: [`ha`, `na`, `pb2`,`pb1`,`pa`,`np`,`mp`,`sh`]
 
-To run this customized build, copy sequences_{lineage}_{segment}.fasta and metadata_{lineage}_{segment}ha.tsv into the data folder and run:
+To run this customized build, copy sequences_{lineage}_{segment}.fasta and metadata_{lineage}_{segment}.tsv into the data folder and run:
 
 ```
-snakemake  auspice/flu_avian_{lineage}_ha_{resolution}.json --configfile config/configfile.yaml --cores [nbr of threads]
+snakemake  auspice/flu_avian_{lineage}_{segment}.json --configfile config/configfile.yaml --cores [nbr of threads]
 ```
 
-In order to have clade information available, before running the build, you need to estimate clades (you need to have HA gene sequences):
+In order to have clade information available (only for NA), before running the build, you need to estimate clades (you need to have HA gene sequences):
 
 ```
 snakemake -s Snakefile_h5n1.clades --cores [nbr of threads] --config label=[location of LABEL binary]
